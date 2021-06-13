@@ -1,0 +1,17 @@
+{% extends 'story.tmpl' %}
+
+{% macro render_gallery_image(extension, slug, description) %}
+    <a href="/images/{{slug}}.{{extension}}">
+        <img src="/images/{{slug}}.thumbnail.{{extension}}" alt="{{description | e}}">
+    </a>
+{% endmacro %}
+
+{% block content %}
+    {{ post.text() }}
+    <div class="gallery">
+    {% for gallery_image in post.meta('gallery') %}
+        {{ render_gallery_image(gallery_image[0], gallery_image[1], gallery_image[2]) }}
+    {% endfor %}
+    </div>
+    {{ math.math_scripts_ifpost(post) }}
+{% endblock %}

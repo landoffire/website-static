@@ -1,0 +1,226 @@
+/* Reset */
+
+html, body, hgroup, h1, h2, h3, p, li, nav, header, ul, hr, footer, aside, iframe {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* Accessibility */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+/* Styles */
+
+html {
+    background-image: url("/steampunk1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 2.8em;
+    line-height: 1em;
+}
+h2 {
+    font-size: 1.3em;
+}
+
+#brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#brand h1, #brand h2 {
+    font-family: "DejaVu Serif", "Noto Serif", serif;
+    color: #000;
+}
+.brand-outer {
+    text-decoration: none;
+}
+
+nav {
+    padding-left: 20px;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #54181b;
+}
+
+nav li {
+    padding: 5px 5px 6px 5px;
+
+    background-color: rgba(102, 20, 24, .2);
+
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #54181b;
+
+    display: inline-block;
+}
+nav li a {
+    text-decoration: none;
+    color: #111;
+    font: 1.2em helvetica, sans-serif;
+}
+nav li.active, nav li:hover {
+    background-color: #661418;
+}
+nav li.active a, nav li:hover a {
+    color: #fff;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.columns h2 {
+    margin: 2px 5px 10px 5px;
+}
+
+main {
+    flex: 10 10;
+    order: 1;
+
+    padding: 8px;
+
+    /*border-width: 1px 0;*/
+    border-style: solid;
+    border-color: #54181b;
+
+    font-family: sans-serif;
+}
+
+main h3 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+main a:link, main a:visited, footer a:link, footer a:visited {
+    color: #661418;
+}
+
+main a:hover, footer a:hover {
+    color: #145466;
+}
+
+main a.dark-button {
+    display: inline-block;
+
+    padding: 3px;
+
+    border-radius: 3px;
+    border: 1px solid #300d0e;
+
+    background-color: #4c0f12;
+    background-image: linear-gradient(#4c0f12, #661418);
+
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+main a.dark-button:hover {
+    background: #661418;
+}
+
+.dark-button.big {
+    padding: 6px;
+
+    border-radius: 5px;
+    border-width: 2px;
+
+    font-size: 1.3em;
+}
+
+main p {
+    text-indent: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.gallery img {
+    border: 1px solid #54181b;
+}
+
+hr {
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid #54181b;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 2em;
+}
+
+footer {
+    padding: 8px;
+    font-style: italic;
+}
+
+.quote {
+    text-indent: 20px;
+}
+
+footer {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #54181b;
+}
+
+@media screen and (max-width: 70em) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 2em;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    main {
+        order: 0;
+
+        border-width: 0;
+    }
+
+    ul {
+        margin-left: 3em;
+    }
+}

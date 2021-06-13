@@ -1,0 +1,26 @@
+main a[href*="manaplus.org"] {
+    margin-left: 2px;
+    padding-left: 1.5em;
+
+    background: url("/manaplus.png") no-repeat;
+    background-size: contain;
+}
+
+main a[href*="themanaworld.org"] {
+    margin-left: 1.9px;
+    padding-left: 1.45em;
+
+    background: url("/tmw.png") no-repeat;
+    background-size: contain;
+}
+
+.gallery img[src*=".thumbnail."] {
+    max-width: 500px;
+}
+
+@media screen and (max-width: 70em) {
+    main a[href*="manaplus.org"], main a[href*="themanaworld.org"] {
+        padding-left: 0;
+        background: none;
+    }
+}

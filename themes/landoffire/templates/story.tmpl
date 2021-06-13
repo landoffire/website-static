@@ -1,0 +1,8 @@
+{#  -*- coding: utf-8 -*- #}
+{% import 'math_helper.tmpl' as math with context %}
+{% extends 'post.tmpl' %}
+
+{% block content %}
+    {{ post.text() }}
+    {{ math.math_scripts_ifpost(post) }}
+{% endblock %}

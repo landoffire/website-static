@@ -1,0 +1,7 @@
+output/
+cache/
+.doit.db.*
+
+.venv/
+__pycache__/
+*.pyc
